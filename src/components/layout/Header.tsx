@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -20,17 +21,15 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="flex items-center gap-1">
-              <div className="w-3 h-8 bg-sdusd-blue rounded-sm" />
-              <div className="w-3 h-8 bg-sdusd-red rounded-sm" />
-              <div className="w-3 h-8 bg-sdusd-orange rounded-sm" />
-              <div className="w-3 h-8 bg-sdusd-green rounded-sm" />
-            </div>
-            <div>
-              <span className="text-lg font-bold text-sdusd-blue leading-tight block">SDUSD</span>
-              <span className="text-[10px] text-sdusd-gray leading-tight block">San Diego Unified</span>
-            </div>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/sdusd-logo.png"
+              alt="San Diego Unified School District"
+              width={220}
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

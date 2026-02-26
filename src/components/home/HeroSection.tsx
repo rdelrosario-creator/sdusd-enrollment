@@ -1,22 +1,27 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-sdusd-blue via-sdusd-blue-dark to-blue-900">
-      {/* Decorative circles */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-sdusd-blue via-sdusd-blue-dark to-[#002244]">
+      {/* Decorative shapes inspired by the SDUSD star emblem */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+      <div className="absolute top-1/2 right-10 w-40 h-40 bg-sdusd-orange/10 rounded-full -translate-y-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="flex gap-1">
-              <span className="w-2 h-2 rounded-full bg-sdusd-red" />
-              <span className="w-2 h-2 rounded-full bg-sdusd-orange" />
-              <span className="w-2 h-2 rounded-full bg-sdusd-green" />
-            </div>
-            <span className="text-white/80 text-sm font-medium tracking-wide uppercase">
+          <div className="flex items-center gap-3 mb-6">
+            <Image
+              src="/sdusd-logo.png"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain brightness-0 invert"
+              aria-hidden="true"
+            />
+            <span className="text-white/90 text-sm font-semibold tracking-wide uppercase">
               2025-2026 School Year
             </span>
           </div>

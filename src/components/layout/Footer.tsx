@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
@@ -7,14 +8,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center gap-0.5">
-                <div className="w-2 h-6 bg-sdusd-blue rounded-sm" />
-                <div className="w-2 h-6 bg-sdusd-red rounded-sm" />
-                <div className="w-2 h-6 bg-sdusd-orange rounded-sm" />
-                <div className="w-2 h-6 bg-sdusd-green rounded-sm" />
-              </div>
-              <span className="text-white font-bold">San Diego Unified School District</span>
+            <div className="mb-4">
+              <Image
+                src="/sdusd-logo.png"
+                alt="San Diego Unified School District"
+                width={200}
+                height={44}
+                className="h-9 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed">
               Inspiring, engaging, and empowering every student, every day, in every way.
@@ -61,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-          <p>&copy; 2025 San Diego Unified School District. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} San Diego Unified School District. All rights reserved.</p>
           <p className="mt-1">This is a demo website for demonstration purposes only.</p>
         </div>
       </div>
